@@ -1,0 +1,449 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* NAVBAR */
+
+.navbar {
+  background-color: white;
+  padding: 17px 0px;
+}
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+}
+
+.search {
+  margin: 0 20px;
+  width: 36%;
+  position: relative;
+}
+
+#search {
+  position: absolute;
+  font-size: 22px;
+  left: 20px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.search input {
+  width: 100%;
+  padding: 10px 36px;
+  border-radius: 5px;
+  border: rgb(236, 236, 236) solid 1px;
+  background-color: rgb(236, 236, 236);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-size: 22px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.line {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  margin: 3px;
+}
+
+/* SECOND NAVBAR */
+
+.navbar2 {
+  background-color: black;
+  font-size: 16px;
+}
+
+.nav-links2 {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.nav-links2 a {
+  display: inline-block;
+  padding: 10px 6px;
+  text-decoration: none;
+  color: white;
+}
+
+/* FIRST MAIN PHOTO */
+
+.firstphoto {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.arrow {
+  z-index: 999;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  color: gray;
+  font-size: 24px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.arrow.left {
+  left: 80px;
+}
+
+.arrow.right {
+  right: 80px;
+}
+
+@media (max-width: 800px) {
+  .firstphotoimg {
+    height: 164px;
+    max-width: auto;
+  }
+
+  .arrow.left{
+    top: 25%;
+    left: 8%;
+  }
+
+  .arrow.right{
+    top: 25%;
+    right: 8%;
+  }
+}
+
+/* ƏN ÇOX SATILANLAR */
+/* YENİ GƏLƏNLƏR */
+/* ƏN ÇOX BƏYƏNİLƏNLƏR */
+
+.trending-product {
+  background-color: rgb(249, 246, 246);
+  padding-bottom: 10px;
+}
+
+.center-text h4 {
+  color: #111;
+  padding: 40px 10px;
+}
+
+.products {
+  overflow-x: scroll;
+  display: flex;
+  gap: 24px;
+}
+
+.product {
+  position: relative;
+  padding: 16px 12px;
+  margin: 10px 0px;
+  background-color: white;
+  height: 540px;
+}
+
+.product-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 320px;
+  width: 100%;
+}
+
+.product-img img {
+  width: 100%;
+  max-height: 100%;
+  height: auto;
+}
+
+.product-content {
+  height: 140px;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product h4 {
+  padding-top: 10px;
+  display: inline-block;
+}
+
+.product h5{
+  padding-top: 10px;
+}
+
+.product img:hover {
+  transform: scale(0.9);
+}
+
+.price h4 {
+  margin: 0;
+  padding: 0;
+  color: #de3163;
+  padding-bottom: 10px;
+}
+
+.heart-icon {
+  font-size: 30px;
+  color: rgb(200, 200, 200);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-weight: 500;
+  padding: 8px 8px;
+  border-radius: 2px;
+  border: 2px solid rgb(223, 223, 223);
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heart-icon:hover {
+  color: #de3163;
+}
+
+span {
+  color: gray;
+  text-decoration: line-through;
+  padding-right: 10px;
+}
+
+.rating {
+  padding: 10px 0;
+  color: orange;
+}
+
+@media (max-width: 767px) {
+  .products {
+    overflow-x: auto;
+    flex-wrap: nowrap; 
+  }
+
+  .product {
+    width: calc(50% - 12px);
+    min-width: 180px;
+    height: 410px;
+  }
+
+  .submit-button{
+    font-size: 16px;
+  }
+
+  .footer-section{
+    font-size: 14px;
+    max-width: 116px;
+  }
+
+  .center-text h4{
+    font-size: 18px;
+    padding: 20px 10px;
+  }
+
+  .product h5{
+    font-size: 16px;
+    max-width: 160px;
+  }
+
+  .product h4{
+    font-size: 18px;
+  }
+  
+  .product-img {
+    height: 200px;
+  }
+  
+  .product-img img {
+    max-height: 100%;
+  }
+
+  .four{
+    display: none;
+  }
+
+  .image-right{
+    display: none;
+  }
+
+  footer h5{
+    padding: 14px 0;
+    font-size: 16px;
+  }
+}
+
+
+/* TWO IMAGES */
+
+.img-adds{
+  display: flex;
+  justify-content: space-between;
+}
+.image {
+  max-height: 290px;
+  width: 48.5%;
+  margin: 20px 0;
+}
+
+/* SECOND MAIN PHOTO */
+
+.container2 {
+  position: relative;
+  width: 100%;
+  padding-bottom: 26.25%;
+  margin: 10px 0;
+}
+
+.secondmainphoto {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* PLACE FOR AN EMAIL */
+
+.container3 {
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  text-align: center;
+  padding: 20px;
+  background-color: rgb(249, 246, 246);
+}
+
+.question {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.input-field {
+  width: 40%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.submit-button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 15px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: rgb(24, 24, 24);
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-sections {
+  display: flex;
+  justify-content: space-around;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.footer-section h4 {
+  margin-top: 0;
+  font-size: 20px;
+  padding: 20px 30px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.elaqe {
+  font-size: 22px;
+  padding-bottom: 10px;
+}
+
+@media (max-width: 800px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .search {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .nav-links2 {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .image {
+    width: 100%;
+  }
+}
